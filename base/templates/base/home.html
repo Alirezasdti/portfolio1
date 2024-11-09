@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>    
+    <title>Alireza SAADATI</title>
+    <link href="{% static '/css/main.css'  %}"  rel ="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+</head>
+<body>
+    <br>
+    <div class="container">
+        <!-- First Row -->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card card-body h-100 border-info" id="profile-wrapper">
+                    <img id="profile-pic" src="{% static 'images/Alireza.JPG' %}" alt="Alireza's profile picture">
+                    <hr>
+                    <h4>HI I am Alireza</h4>
+                    <p>I love being part of your team.</p>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="card card-body h-100 border-info">
+                    <h4>About me</h4>
+                    <hr>
+                    <p>My passion for technology and engineering began in middle school when I was fascinated by building LEGO
+                        robots and participating in WRO competitions. This enthusiasm led me to pursue a degree in Electrical Engineering,
+                        complemented by experience as a Network Engineer, Automation Engineer, and Web Developer. Currently, I am interning at Bosch in Belgium.
+                    </p>
+
+                    <ul class="social-links">
+                        <li><img class="social" src="{% static 'images/gmail.webp' %} "></li>
+                        <li><img class="social" src="{% static 'images/LinkdIn.png' %} "></li>
+                        <li><img class="social" src="{% static 'images/github.jfif' %} "></li>
+                    </ul>    
+
+
+                </div>            
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Second Row (two empty cards) -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card card-body h-100 border-info ">
+                    <!-- You can add content here, e.g., a title, description, etc. -->
+                    <h5>My expriences</h5>
+                    <p>Content for the first card</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-body h-100 border-info ">
+                    <!-- You can add content here too -->
+                    <h5>My ...</h5>
+                    <p>Content for the second card</p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- content -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card card-body h-100 border-info">
+                    <!--  content  -->
+                    <h5>what im doing know</h5>
+                    <p>Content for the third card</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-body h-100 border-info ">
+                    <!--  content  -->
+                    <h5>My goal</h5>
+                    <p>Content for the fourth card</p>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</body>
+</html>
