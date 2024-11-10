@@ -1,13 +1,13 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>    
     <title>Alireza SAADATI</title>
     <link href="{% static '/css/main.css'  %}"  rel ="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
 </head>
+
 <body>
     <br>
     <div class="container">
@@ -32,12 +32,24 @@
                     </p>
 
                     <ul class="social-links">
-                        <li><img class="social" src="{% static 'images/gmail.webp' %} "></li>
-                        <li><img class="social" src="{% static 'images/LinkdIn.png' %} "></li>
-                        <li><img class="social" src="{% static 'images/github.jfif' %} "></li>
-                    </ul>    
-
-
+                        <li>
+                            <a href="https://mail.google.com/mail/u/0/?hl=en#inbox" target="_blank">
+                                <img class="social" src="{% static 'images/gmail.webp' %}" alt="Gmail">
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.linkedin.com/in/saadatialireza/" target="_blank">
+                                <img class="social" src="{% static 'images/LinkdIn.png' %}" alt="LinkedIn">
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/Alirezasdti" target="_blank">
+                                <img class="social" src="{% static 'images/github.jfif' %}" alt="GitHub">
+                            </a>
+                        </li>
+                    </ul>
                 </div>            
             </div>
         </div>
@@ -48,14 +60,15 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="card card-body h-100 border-info ">
-                    <!-- You can add content here, e.g., a title, description, etc. -->
-                    <h5>My expriences</h5>
-                    <p>Content for the first card</p>
+                    <h5>Download my CV</h5>
+                    <p><a href="{% static 'pdf/Alireza_Saadati - CV 2024.pdf' %}" class="btn btn-primary" download="Alireza_Saadati_Resume.pdf">
+                        here
+                    </a>
+                    </p>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="card card-body h-100 border-info ">
-                    <!-- You can add content here too -->
                     <h5>My ...</h5>
                     <p>Content for the second card</p>
                 </div>
@@ -68,14 +81,12 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="card card-body h-100 border-info">
-                    <!--  content  -->
-                    <h5>what im doing know</h5>
-                    <p>Content for the third card</p>
+                    <h5>What I'm doing now</h5>
+                    <p>Currently im doing </p>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="card card-body h-100 border-info ">
-                    <!--  content  -->
                     <h5>My goal</h5>
                     <p>Content for the fourth card</p>
                 </div>

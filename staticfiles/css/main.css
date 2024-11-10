@@ -1,14 +1,19 @@
-body{
-    background-color: #807171!IMPORTANT;
+body {
+    background-image: url('/static/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
+
 
 profile-wrapper{
     text-align: center;
 }
 
 profile-pic{
-    width: 150px;
-    height: 150px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -21,12 +26,12 @@ ul{
 }
 
 .social-links ul, li{
-
+    
     list-style-type: none;
     display: inline-block;
 }
 
 .social{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
