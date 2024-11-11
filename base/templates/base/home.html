@@ -4,11 +4,31 @@
 <html lang="en">
 <head>    
     <title>Alireza SAADATI</title>
-    <link href="{% static '/css/main.css'  %}"  rel ="stylesheet" type="text/css">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" href="/static/images/brw.png" type="image/png">
 </head>
 
 <body>
+
+    <video autoplay muted loop id="background-video">
+        <source src="{% static 'videos/background.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="{% url 'home' %}">My Portfolio</a>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About Me</a></li>
+            <li><a href="{% url 'projects' %}">Projects</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+
+
     <br>
     <div class="container">
         <!-- First Row -->
@@ -26,9 +46,7 @@
                 <div class="card card-body h-100 border-info">
                     <h4>About me</h4>
                     <hr>
-                    <p>My passion for technology and engineering began in middle school when I was fascinated by building LEGO
-                        robots and participating in WRO competitions. This enthusiasm led me to pursue a degree in Electrical Engineering,
-                        complemented by experience as a Network Engineer, Automation Engineer, and Web Developer. Currently, I am interning at Bosch in Belgium.
+                    <p>I'm a DevOps Engineer with a strong foundation in Electrical and Computer Engineering, specializing in automation, network administration, and web development. Currently, as an intern at Bosch in Belgium, I work on predictive maintenance through vibration analysis, leveraging MATLAB and LabVIEW for real-time data acquisition and system optimization. My background includes Linux system management, cloud infrastructure, and containerization tools like Docker and Kubernetes, as well as extensive experience with monitoring platforms. Driven by a passion for innovation, I excel in roles that bridge technology with practical solutions.
                     </p>
 
                     <ul class="social-links">
@@ -37,13 +55,11 @@
                                 <img class="social" src="{% static 'images/gmail.webp' %}" alt="Gmail">
                             </a>
                         </li>
-                        
                         <li>
                             <a href="https://www.linkedin.com/in/saadatialireza/" target="_blank">
                                 <img class="social" src="{% static 'images/LinkdIn.png' %}" alt="LinkedIn">
                             </a>
                         </li>
-                        
                         <li>
                             <a href="https://github.com/Alirezasdti" target="_blank">
                                 <img class="social" src="{% static 'images/github.jfif' %}" alt="GitHub">
@@ -59,40 +75,118 @@
         <!-- Second Row (two empty cards) -->
         <div class="row">
             <div class="col-md-6">
-                <div class="card card-body h-100 border-info ">
+                <div class="card card-body h-100 border-info">
                     <h5>Download my CV</h5>
-                    <p><a href="{% static 'pdf/Alireza_Saadati - CV 2024.pdf' %}" class="btn btn-primary" download="Alireza_Saadati_Resume.pdf">
-                        here
-                    </a>
-                    </p>
+                    <p><a href="{% static 'pdf/Alireza_Saadati - CV 2024.pdf' %}" class="btn btn-primary" download="Alireza_Saadati_Resume.pdf">here</a></p>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card card-body h-100 border-info ">
-                    <h5>My ...</h5>
-                    <p>Content for the second card</p>
+                <div class="card card-body h-100 border-info">
+                    <h5>My Goal</h5>
+                    <p>I'm on a mission to become an exceptional DevOps engineer—future me is already thanking me</p>
                 </div>
             </div>
         </div>
 
         <br>
 
-        <!-- content -->
+        <!-- Work Experience and Education -->
         <div class="row">
             <div class="col-md-6">
                 <div class="card card-body h-100 border-info">
-                    <h5>What I'm doing now</h5>
-                    <p>Currently im doing </p>
+                    <h5>Work Experience</h5>
+                    
+                    <!-- Bosch Internship -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">July 2024 - December 2024</div>
+                        <div class="timeline-content">
+                            <h5>Software Engineer Intern</h5>
+                            <p><strong>BOSCH, Belgium</strong></p>
+                            <p>
+                                - Specialized in Vibration Analysis, MATLAB, LabVIEW Integration, and HMI.<br>
+                                - Conducted vibration analysis using SKF devices for predictive maintenance and performance optimization.<br>
+                                - Developed algorithms in MATLAB to process and interpret vibration data, ensuring precise diagnostics.<br>
+                                - Integrated sensor systems through LabVIEW for real-time data acquisition and analysis.<br>
+                                - Focused on enhancing system reliability and efficiency.<br>
+                                - Combined hardware, software solutions, and HMI to streamline automation and improve machine health monitoring.<br>
+                                - Proficient in MATLAB, NI LabVIEW, Python, Programmable Logic Controller (PLC), Vibration Analysis, and HMI.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sanay Co Junior Network Engineer -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">August 2021 - October 2022</div>
+                        <div class="timeline-content">
+                            <h5>Junior Network Engineer</h5>
+                            <p><strong>Sanay Co, IRAN</strong></p>
+                            <p>
+                                - Specializes in network design, administration, and system optimization.<br>
+                                - <strong>Network Administration:</strong> Expertise in network switches, wireless networking, VPN, Unix, FreeBSD, OPNsense, and pfSense.<br>
+                                - <strong>Linux System Administration:</strong> Proficient in Linux Server, Ubuntu, Debian, and Secure Shell (SSH).<br>
+                                - <strong>Monitoring & Troubleshooting:</strong> Skilled in using Grafana, Zabbix, Prometheus, and other network monitoring tools.<br>
+                                - <strong>Virtualization & Containers:</strong> Proficient in Docker containerization and orchestrating Kubernetes applications (clusters, nodes, pods). Skilled in designing microservices architecture and managing container lifecycles.<br>
+                                - <strong>Kubernetes Skills:</strong> Experienced in Kubernetes cluster management, including node setup, autoscaling, load balancing, and deploying with Helm charts and YAML.<br>
+                                - <strong>VoIP & Communication:</strong> Experience with Voice over IP (VoIP) systems.<br>
+                                - <strong>Programming & Scripting:</strong> Proficient in Python.<br>
+                                - Additional skills include Network Monitoring Tools, Linux System Administration, Wireless Networking, pfSense, and OPNsense.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Irantransfo Co IT Technical Support -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">May 2021 - August 2021</div>
+                        <div class="timeline-content">
+                            <h5>IT Technical Support</h5>
+                            <p><strong>Irantransfo Co, IRAN</strong></p>
+                            <p>
+                                - <strong>Network Monitoring:</strong> Utilized Grafana, Zabbix, and Prometheus for real-time performance monitoring.<br>
+                                - <strong>Computer Assembly:</strong> Assembled, configured, and installed computer hardware for departments.<br>
+                                - <strong>Troubleshooting:</strong> Provided technical support for hardware, software, and network issues.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Educational Experience -->
             <div class="col-md-6">
-                <div class="card card-body h-100 border-info ">
-                    <h5>My goal</h5>
-                    <p>Content for the fourth card</p>
+                <div class="card card-body h-100 border-info">
+                    <h5>Education</h5>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">October 2022 - December 2024</div>
+                        <div class="timeline-content">
+                            <h5>MSc in Electrical Engineering</h5>
+                            <p><strong>University of Pavia, Italy</strong></p>
+                            <p>Master's Program: Gained expertise in system simulation, MATLAB, and PLECS for system optimization and converter design. Current thesis focuses on vibration analysis with deep learning, expanding skills in electrical engineering and emerging technologies.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">February 2024 - June 2024</div>
+                        <div class="timeline-content">
+                            <h5>MSc in Computer Engineering</h5>
+                            <p><strong>University of Leon, Spain</strong></p>
+                            <p>Erasmus Program: Explored deep learning and worked on Python projects to enhance programming skills.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">February 2018 - June 2022</div>
+                        <div class="timeline-content">
+                            <h5>BSc in Electrical Engineering</h5>
+                            <p><strong>University of Zanjan, Iran</strong></p>
+                            <p>Developed expertise in electrical systems, circuit design, and automation technologies with hands-on projects like an Arduino-based alert system. Proficient in Arduino, MATLAB, and Python.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
         <br>
     </div>
+
 </body>
 </html>
